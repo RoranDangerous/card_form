@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import CardForm from './CardForm';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [submitted, setSubmitted] = useState(false);
+
+  if(submitted){
+    return (
+      <h1 className='Thanks'>Thank you!</h1>
+    )
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CardForm onSubmit={() => setSubmitted(true)}/>
     </div>
   );
 }
