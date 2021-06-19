@@ -11,6 +11,7 @@
     "casperjs": "^1.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.14.3",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
   },
@@ -38,5 +39,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "faker": "^5.5.3",
+    "puppeteer": "^10.0.0",
+    "puppeteer-core": "^10.0.0"
   }
 }

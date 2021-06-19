@@ -1,37 +1,22 @@
-import { useState } from 'react';
-
 const CardForm = ({ onSubmit }) => {
-	const [data, setData] = useState({
-		cvc: "",
-		expiry: "",
-		name: "",
-		number: "",
-		type: "",
-		zip: "",
-	});
-
-	const handleInputChange = (e) => {
-		setData({
-			...data,
-			[e.target.name]: e.target.value
-		})
+	const handleSubmit = e => {
+		e.preventDefault();
+		onSubmit();
 	}
 
 	return (
 		<div id="PaymentForm">
-			<form action="" onSubmit={onSubmit}>
+			<form onSubmit={handleSubmit}>
 				<input
 					type="text"
 					name="name"
 					placeholder="Cardholder Name"
-					onChange={handleInputChange}
 					required
 				/>
 				<input
 					type="text"
 					name="number"
 					placeholder="Card Number"
-					onChange={handleInputChange}
 					pattern="[0-9]{16}"
 					autoComplete="cc-number"
 					required
@@ -42,7 +27,6 @@ const CardForm = ({ onSubmit }) => {
 					placeholder="CVC"
 					max="999"
 					pattern="([0-9]|[0-9]|[0-9])"
-					onChange={handleInputChange}
 					required
 				/>
 				<input
@@ -50,14 +34,12 @@ const CardForm = ({ onSubmit }) => {
 					name="expiry"
 					placeholder="MMYY"
 					max="9999"
-					onChange={handleInputChange}
 					required
 				/>
 				<input
 					type="text"
 					name="zip"
 					placeholder="Postal/Zip Code"
-					onChange={handleInputChange}
 					required
 				/>
 				<button type="submit">Validate</button>
