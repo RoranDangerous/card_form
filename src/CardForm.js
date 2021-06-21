@@ -13,6 +13,10 @@ const CardForm = ({ onSubmit }) => {
 					placeholder="Cardholder Name"
 					required
 				/>
+				<select name="type" >
+					<option value='visa'>Visa</option>
+					<option value='mastercard'>Mastercard</option>
+				</select>
 				<input
 					type="text"
 					name="number"
