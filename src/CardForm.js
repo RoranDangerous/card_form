@@ -1,7 +1,13 @@
+import ReactGA from 'react-ga';
 const CardForm = ({ onSubmit }) => {
 	const handleSubmit = e => {
 		e.preventDefault();
-		onSubmit();
+		ReactGA.event({
+			category: 'Editing',
+			action: 'Deleted Component',
+			label: 'Game Widget'
+		});
+		// onSubmit();
 	}
 
 	return (

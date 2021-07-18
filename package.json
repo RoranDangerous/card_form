@@ -11,6 +11,7 @@
     "casperjs": "^1.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-ga": "^3.3.0",
     "react-modal": "^3.14.3",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.0.1"
